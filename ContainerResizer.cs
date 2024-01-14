@@ -12,7 +12,7 @@ namespace ContainerResizer
     {
         private const string MyGUID = "com.vapok.ContainerResizer";
         private const string PluginName = "ContainerResizer";
-        private const string VersionString = "1.0.1";
+        private const string VersionString = "1.0.2";
 
         public static ContainerResizer Instance => _instance;
         public static ManualLogSource Log = new ManualLogSource(PluginName);

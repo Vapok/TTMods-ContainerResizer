@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerResizer", "ContainerResizer.csproj", "{3D348066-65A5-4A6D-9281-03F13F85F052}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		API|Any CPU = API|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.API|Any CPU.ActiveCfg = API|Any CPU
+		{3D348066-65A5-4A6D-9281-03F13F85F052}.API|Any CPU.Build.0 = API|Any CPU
+	EndGlobalSection
+EndGlobal
