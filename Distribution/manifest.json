@@ -1,0 +1,9 @@
+{
+  "name": "ContainerResizer",
+  "version_number": "1.0.2",
+  "website_url": "https://github.com/Vapok/TTMods-ContainerResizer",
+  "description": "Resize individual chests on-the-fly to restrict how much a chest can hold. Multiplayer Support included.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
