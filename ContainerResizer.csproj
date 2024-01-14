@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{3D348066-65A5-4A6D-9281-03F13F85F052}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>ContainerResizer</RootNamespace>
+        <AssemblyName>ContainerResizer</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony">
+          <HintPath>..\..\..\..\VapokModBase\References\BepInEx\5.4.2100\BepInEx\core\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>..\..\..\References\Public\Assembly-CSharp_publicized.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass">
+          <HintPath>..\..\..\References\Public\Assembly-CSharp-firstpass_publicized.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx">
+          <HintPath>..\..\..\..\VapokModBase\References\BepInEx\5.4.2100\BepInEx\core\BepInEx.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\Mirror.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror.Authenticators">
+          <HintPath>..\..\..\References\Public\Mirror.Authenticators_publicized.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror.Components">
+          <HintPath>..\..\..\References\Public\Mirror.Components_publicized.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+        <Reference Include="Unity.TextMeshPro">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+          <HintPath>F:\SteamLibrary\steamapps\common\Techtonica\Techtonica_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Assets\TTModAssets.cs" />
+        <Compile Include="Components\SliderComponent.cs" />
+        <Compile Include="ContainerResizer.cs" />
+        <Compile Include="Extensions\UIExtenstions.cs" />
+        <Compile Include="Network\ContainerNetwork.cs" />
+        <Compile Include="Objects\ContainerRecord.cs" />
+        <Compile Include="Patches\InventoryNavigatorPatches.cs" />
+        <Compile Include="Patches\MachineDefinitionPatches.cs" />
+        <Compile Include="Patches\NetworkIdentityPatches.cs" />
+        <Compile Include="Patches\SaveStatePatches.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Systems\ContainerManager.cs" />
+        <Compile Include="Utils.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Assets\vapokttmods" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
